@@ -1,6 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 
 class User extends Model {
+  // super é a herança da model
   static init(sequelize) {
     super.init(
       {

@@ -1,4 +1,3 @@
-import { where } from 'sequelize';
 import User from '../models/User';
 
 class UserController {
@@ -58,6 +57,7 @@ class UserController {
   async delete(req, res) {
     try {
       const { uid } = req.params;
+
       const deleted = await User.destroy({ where: { uid } });
       if (!deleted) {
         throw Error('Usuário não encontrado');
